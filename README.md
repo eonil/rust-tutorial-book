@@ -126,6 +126,29 @@ You can communicate with other machines with different kind of channels in same 
 Notice that how to encode/decode/process messages.
 
 ````rust
+fn step(stdin: &std::io::Stdin) {
+    let mut buffer = String::new();
+    stdin.read_line(&mut buffer).expect("failed to read line from stdin.");
+    let msg: Message = serde_json::from_str(&buffer).expect("failed to decode command.");
+    println!("CHILD: recv {:#?}", msg);
+    use Message::*;
+    match msg {
+        Action1 => println!("Here be dragson."),
+        Action2 => println!("Making decision is slow."),
+        Action3(num) => println!("A little copying is better than a little dependency. ({})", num),
+    }
+    println!("\n");
+}
+````
+
+We also learn how to handle errors.
+Rust does not have error throwing. Basically, "throwing" and error means throwing low-level details
+to high-level function. At higher level, generally there's no good way to understand and deal with
+lower level errors. So proper programs should handle all low-level errors properly and should return
+only result. And this is why Rust support only returning `Result`.
+You have to include all needed informations in the returning error value. 
+
+````rust
 fn step(stdin: &std::io::Stdin) -> LogResult<()> {
     let mut buffer = String::new();
     stdin.read_line(&mut buffer).wrap_up("failed to read line from stdin.")?;
@@ -141,7 +164,6 @@ fn step(stdin: &std::io::Stdin) -> LogResult<()> {
     Ok(())
 }
 ````
-
 
 
 
