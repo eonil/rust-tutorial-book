@@ -2,7 +2,7 @@ Rust Tutorial Book
 ==============
 Eonil 2021.
 
-Book to teach core concept of Rust to other language users.
+Book to onboard other language users quickly onto Rust platform.
 This book contains short minimal examples to learn Rust programming quickly.
 We assume audiences are very familiar with at least one or more 
 strongly type-checked languages such as Swift, Kotlin, TypeScript or Java.
