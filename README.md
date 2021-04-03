@@ -4,8 +4,8 @@ Eonil 2021.
 
 Book to teach core concept of Rust to other language users.
 This book contains short minimal examples to learn Rust programming quickly.
-We assume audiences are very familiar with modern general purpose programming languages 
-such as Swift, Kotlin, JavaScript or Java.
+We assume audiences are very familiar with at least one or more 
+strongly type-checked languages such as Swift, Kotlin, TypeScript or Java.
 
 When we write Rust programs, people are tend to care too much about "performance".
 Optimizatioin is difficult and we don't have to make our learning more difficult.
