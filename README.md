@@ -10,10 +10,10 @@ such as Swift, Kotlin, JavaScript or Java.
 When we write Rust programs, people are tend to care too much about "performance".
 Optimizatioin is difficult and we don't have to make our learning more difficult.
 
-0. Simple CLI tool (I/O)
-0. Looping CLI tool (REPL)
-0. JSON CLI tool (Serialization)
-0. Subprocess Communication (IPC)
+1. Simple CLI tool (I/O)
+1. Looping CLI tool (REPL)
+1. JSON CLI tool (Serialization)
+1. Subprocess Communication (IPC)
 
 I intentionally avoid talking about these topics.
 - Concurrency.
