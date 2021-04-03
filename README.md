@@ -24,7 +24,7 @@ I intentionally avoid these topics.
 
 It's because I'm not really an expert on the topics.
 Those topics are not for beginners, and I don't want to scare you.
-Once you onboarded on Rust, you'll quickly realize what are they and why you need them.
+Once you onboarded on Rust, you'll quickly learn what are they and why you need them.
 Rust compiler also will help you to learn about all the details of the rules case-by-case.
 I hope to have another chance to talk about them.
 
