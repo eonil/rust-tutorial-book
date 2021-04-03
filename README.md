@@ -147,7 +147,7 @@ to high-level function. So it breaks abstraction layers.
 At higher level, there's generally no good way to understand and deal with lower level errors. 
 So proper programs should handle all low-level errors properly in low-level
 and return only result that can be understood at higher level. 
-And this is why Rust support only returning `Result`.
+And this is why Rust supports only returning `Result`.
 You have to include all needed informations in the returning error value. 
 
 ````rust
