@@ -2,7 +2,7 @@ Rust Tutorial Book
 ==============
 Eonil 2021.
 
-Book to onboard other language users quickly onto Rust platform.
+Book to onboard other language users quickly onto Rust.
 This book contains short minimal examples to learn Rust programming quickly.
 We assume audiences are very familiar with at least one or more 
 strongly type-checked languages such as Swift, Kotlin, TypeScript or Java.
@@ -15,11 +15,14 @@ Optimizatioin is difficult and we don't have to make our learning more difficult
 1. JSON CLI tool (Serialization)
 1. Subprocess Communication (IPC)
 
-I intentionally avoid talking about these topics.
-- Concurrency.
-- WebAssembly.
-- Best practices.
+I intentionally avoid these topics.
+
+- In-process (shared memory) concurrency.
+- WebAssembly. (web browser app written in Rust)
+- Best practices. (case-by-case)
+
 It's because, I'm not really an expert on the topics.
+Anyway, once you onboarded on Rust, it won't be very difficult to learn about them yourself.
 I hope to have another chance to talk about them.
 
 
@@ -117,8 +120,17 @@ Subprocess Communication (IPC)
 You'll gonna learn how to communicate with other processes in Rust.
 With this example, you can figure out how to communicate over network.
 
-    (TBD)
-
+````rust
+let mut app = App {
+    num: 0,
+    child: Command::new("target/debug/child_program")
+        .stdin(Stdio::piped())
+        .stdout(Stdio::inherit())
+        .stderr(Stdio::inherit())
+        .spawn()
+        .expect("failed to spawn subprocess."),
+};
+````
 
 
 
