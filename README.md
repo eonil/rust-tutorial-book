@@ -28,22 +28,69 @@ Simple CLI Tool (I/O)
 ---------------------------------------
 With this example, we are going to learn how to get command line arguments and print them to STDOUT.
 
-    (TBD)
+````rust
+use std::env;
+
+fn main() {
+    println!("Hello, world!");
+    let args: Vec<String> = env::args().collect();
+
+    // Debug print.
+    println!("{:?}", args.join("-"));
+
+    // Raw print.
+    println!("{}", args.join("-"));
+}
+````
 
 Also, we gonna see how to use `clap` quickly in second example.
 
-    (TBD)
+````rust
+use std::env;
+use clap::Clap;
+
+#[derive(Clap)]
+#[derive(Debug)]
+struct Opts {
+    opt1: String,
+    opt2: i32,
+}
+
+fn main() {
+    let opts = Opts::parse();
+    println!("{:?}", opts);
+}
+````
 
 
 
 Looping CLI Tool (REPL)
 -----------------------------
 With this example, we are going to learn how to manage state of long running interactive programs.
-This involves STDIN/STDOUT/STDERR access.
+
+````rust
+fn read(&mut self) {
+    let mut buffer = String::new();
+    io::stdin().read_line(&mut buffer).expect("failed to read from STDIN.");
+    let trimmed = String::from(buffer.trim());
+    self.values.push(trimmed);
+}
+
+fn eval(&mut self) {
+    self.all = self.values.join("-");
+}
+
+fn print(&self) {
+    println!("all: {}", self.all);
+}
+````
 
 Also, we gonna learn how Rust avoids so famous "shared mutable state" problems.
 
-    (TBD)
+````rust
+case1(&state, &state);
+case2(&mut state, &mut state);
+````
 
 
 
@@ -52,14 +99,23 @@ JSON CLI Tool (Serialization)
 With this example, we are going to learn how to encode/decode JSON data with `serde` library.
 So we can serialize/deserlize in-memory data to communicate with other processes. 
 
-    (TBD)
+````rust
+#[derive(Serialize,Deserialize)]
+struct State {
+    values: Vec<String>,
+    num: i32,
+}
+
+let json = serde_json::to_string(&self).unwrap();
+println!("json: {}", json);
+````
 
 
 
 Subprocess Communication (IPC)
 -----------------------------------------------------------
 You'll gonna learn how to communicate with other processes in Rust.
-With this experience, you will be able to figure out how to make network programs.
+With this example, you can figure out how to communicate over network.
 
     (TBD)
 
