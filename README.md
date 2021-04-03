@@ -17,6 +17,7 @@ Optimizatioin is difficult and we don't have to make our learning more difficult
 
 I intentionally avoid these topics.
 
+- Lifetimes.
 - In-process (shared memory) concurrency.
 - WebAssembly. (web browser app written in Rust)
 - Best practices. (case-by-case)
