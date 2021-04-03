@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# This script must run at Cargo package root.
+
+cargo build --bin child_program
+cargo run --bin parent_program
