@@ -22,8 +22,10 @@ I intentionally avoid these topics.
 - WebAssembly. (web browser app written in Rust)
 - Best practices. (case-by-case)
 
-It's because, I'm not really an expert on the topics.
-Anyway, once you onboarded on Rust, it won't be very difficult to learn about them yourself.
+It's because I'm not really an expert on the topics.
+Those topics are not beginner topics, therefore I don't want to scare you.
+Once you onboarded on Rust, you'll quickly realize what are they and why you need them.
+Rust compiler also will help you to learn about all the details of the rules case-by-case.
 I hope to have another chance to talk about them.
 
 
