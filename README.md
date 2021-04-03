@@ -10,10 +10,10 @@ strongly type-checked languages such as Swift, Kotlin, TypeScript or Java.
 When we write Rust programs, people are tend to care too much about "performance".
 Optimizatioin is difficult and we don't have to make our learning more difficult.
 
-1. Simple CLI tool (I/O)
-1. Looping CLI tool (REPL)
-1. JSON CLI tool (Serialization)
-1. Subprocess Communication (IPC)
+1. Simple CLI Tool (I/O)
+1. Looping CLI Tool (REPL)
+1. JSON CLI Tool (Serialization)
+1. Pub-Sub Network (IPC)
 
 I intentionally avoid these topics.
 
