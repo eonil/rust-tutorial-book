@@ -118,10 +118,12 @@ println!("json: {}", json);
 
 
 
-Subprocess Communication (IPC)
------------------------------------------------------------
-You'll gonna learn how to communicate with other processes in Rust.
-With this example, you can figure out how to communicate over network.
+Pub-Sub Network (IPC)
+---------------------
+This example shows how to make very simple pub-sub network using inter-process standard I/O.
+Just establish an open channel to target process and exchange messages.
+You can communicate with other machines with different kind of channels in same way.
+Notice that how to encode/decode/process messages.
 
 ````rust
 let mut app = App {
